@@ -24,7 +24,7 @@ config:
 
 http:
   # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
+   api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
 
@@ -63,6 +63,34 @@ sensor:
 tts:
   - platform: google
 
+# xiaomi aqara
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - key: 5r51j9lius672ywp
+      mac: 78:11:DC:B3:88:73
+
+# boardlink
+switch:
+  - platform: broadlink
+    host: 192.168.1.123
+    mac: '34:ea:34:c7:6a:d7'
+    switches:
+      tv:
+        friendly_name: "TV"
+        command_on: "JgBQAAABJpMTEhMREhQRExETEhQROBITEBQSExETEhMSEhITETgRFRETETgTExE3ExMREhEVERQRNxMTETcTExA5EjcSOBE4FAAGAgABJUoSAA0FAAAAAAAAAAA="
+        command_off: "JgBQAAABJpMTEhMREhQRExETEhQROBITEBQSExETEhMSEhITETgRFRETETgTExE3ExMREhEVERQRNxMTETcTExA5EjcSOBE4FAAGAgABJUoSAA0FAAAAAAAAAAA="
+      ac:
+        friendly_name: "AC"
+        command_on: "JgAkAQABIpQUFBIVFBMTNxUTExQSFRMUEzkSFBMVEzcUFBMTFBQTFBMVEhUTExQUEhUTNxQUFRMTFBMUExQSFRM3ExUSOBQTFRQSOBMUFAACjBQUExQTExQUExUSFBQUEhQUFBMUExUTExQTFDcWEhIVExQTFBMVEhUUExMUExQSFhMUEhUSFRMUEjgUFBQ2FDcVAAUYAAEjlBQUEhUTExQ3FBMUExQUExUSOBQUExQSOBUTEhQUExUTEhYSFBQUExQTFBM3FRMTFREWExMUFBMUEzcVNhU2FBMUFBQ2FBQTAAKMFRQSFRIUFBMUFBIVExUSFRIUFRMTExQUFBMTFRMUExQTFBIWEhUTFBMUExQTFBQUEhUTFBMUExQSOBQ3FRMUNhQADQUAAAAA"
+        command_off: "JgAkAQABIpQUFBIVFBMTNxUTExQSFRMUEzkSFBMVEzcUFBMTFBQTFBMVEhUTExQUEhUTNxQUFRMTFBMUExQSFRM3ExUSOBQTFRQSOBMUFAACjBQUExQTExQUExUSFBQUEhQUFBMUExUTExQTFDcWEhIVExQTFBMVEhUUExMUExQSFhMUEhUSFRMUEjgUFBQ2FDcVAAUYAAEjlBQUEhUTExQ3FBMUExQUExUSOBQUExQSOBUTEhQUExUTEhYSFBQUExQTFBM3FRMTFREWExMUFBMUEzcVNhU2FBMUFBQ2FBQTAAKMFRQSFRIUFBMUFBIVExUSFRIUFRMTExQUFBMTFRMUExQTFBIWEhUTFBMUExQTFBQUEhUTFBMUExQSOBQ3FRMUNhQADQUAAAAA"
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
