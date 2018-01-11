@@ -1,10 +1,6 @@
 # HA-config
 Installation
 * [Hass.io](https://zhuanlan.zhihu.com/p/30568280 "1.0 安装Hass.io")<br> 
-* Python Virtual Env<br> 
-* Hassbian<br> 
-* Updating<br> 
-* Troubleshooting<br>
 
 Configuration
 * YAML<br> 
@@ -115,8 +111,6 @@ Ecosystem
 > * Let's Encrypt (detailed)<br> 
 * Backup<br> 
 > * [Backup to GitHub](https://zhuanlan.zhihu.com/p/31316242 "5.0 备份你的Home Assistant配置文件到github")<br>
-> * Backup to Dropbox<br> 
-> * Backup to USB device<br> 
 * scenegen<br> 
 * Synology<br> 
 * HASS Configurator<br> 
