@@ -76,47 +76,47 @@ MQTT
 
 iOS
 * Basic notifications<br> 
-* Sounds<br> 
-* Architecture<br> 
-* Privacy, rate limiting and security<br> 
+> * Sounds<br> 
+> * Architecture<br> 
+> * Privacy, rate limiting and security<br> 
 * Advanced notifications<br> 
-* Attachments<br> 
-* Dynamic content<br> 
-* Actionable notifications<br> 
-* Requesting location updates<br> 
+> * Attachments<br> 
+> * Dynamic content<br> 
+> * Actionable notifications<br> 
+> * Requesting location updates<br> 
 * Location Tracking<br> 
 * Integration with other apps<br> 
 
 Ecosystem
 * Autostart<br> 
-* systemd (Linux)<br> 
-* Upstart (Linux)<br> 
-* init.d (Linux)<br> 
-* macOS<br> 
-* Synology NAS<br> 
+> * systemd (Linux)<br> 
+> * Upstart (Linux)<br> 
+> * init.d (Linux)<br> 
+> * macOS<br> 
+> * Synology NAS<br> 
 * AppDaemon<br> 
 * HADashboard<br> 
 * Notebooks<br> 
-* Introduction<br> 
-* Installation<br> 
-* Graph<br> 
-* Home Assistant API<br> 
-* Database<br> 
-* Statistics<br> 
+> * Introduction<br> 
+> * Installation<br> 
+> * Graph<br> 
+> * Home Assistant API<br> 
+> * Database<br> 
+> * Statistics<br> 
 * Remote access<br> 
-* Apache<br> 
-* Caddy Server<br> 
-* NGINX<br> 
-* NGINX with subdomain<br> 
-* Tor Onion Service<br> 
+> * Apache<br> 
+> * Caddy Server<br> 
+> * NGINX<br> 
+> * NGINX with subdomain<br> 
+> * Tor Onion Service<br> 
 * Certificates<br> 
-* Self-signed certificate<br> 
-* Certificate domain owners<br> 
-* Let's Encrypt (detailed)<br> 
+> * Self-signed certificate<br> 
+> * Certificate domain owners<br> 
+> * Let's Encrypt (detailed)<br> 
 * Backup<br> 
-* [Backup to GitHub](https://zhuanlan.zhihu.com/p/31316242 "5.0 备份你的Home Assistant配置文件到github")<br>
-* Backup to Dropbox<br> 
-* Backup to USB device<br> 
+> * [Backup to GitHub](https://zhuanlan.zhihu.com/p/31316242 "5.0 备份你的Home Assistant配置文件到github")<br>
+> * Backup to Dropbox<br> 
+> * Backup to USB device<br> 
 * scenegen<br> 
 * Synology<br> 
 * HASS Configurator<br> 
