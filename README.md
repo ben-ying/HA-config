@@ -4,7 +4,8 @@ Installation
 * Python Virtual Env<br> 
 * Hassbian<br> 
 * Updating<br> 
-* Troubleshooting<br> 
+* Troubleshooting<br>
+
 Configuration
 * YAML<br> 
 * [Basic information](https://zhuanlan.zhihu.com/p/32127317 "7.0 configuration.yaml基本配置信息")<br> 
@@ -12,6 +13,7 @@ Configuration
 * Customizing entities<br> 
 * Troubleshooting<br> 
 * Security Check Points<br> 
+
 Advanced Configuration
 * [Remote access](https://zhuanlan.zhihu.com/p/30704722 "3.0 安装Duck DNS，实现远程访问Home Assistant")<br> 
 * Packages<br> 
@@ -20,9 +22,11 @@ Advanced Configuration
 * Templating<br> 
 * Group Visibility<br> 
 * Entity component platform options<br> 
+
 Core objects
 * Events<br> 
 * State Objects<br> 
+
 Automation
 * Examples<br> 
 * Editor<br> 
@@ -34,18 +38,22 @@ Automation
 * Android/iOS Homescreen<br> 
 * Web server fingerprint<br> 
 * Browser Compatibility List<br> 
+
 Backend
 * Database<br> 
 * Updater<br> 
 * API<br> 
+
 Scripts
 * Service Calls<br> 
 * Conditions<br> 
 * Editor<br> 
+
 Tools and Helpers
 * Developer Tools<br> 
 * hass<br> 
 * Scripts<br> 
+
 Z-Wave
 * Configuring the Z-Wave component<br> 
 * Adding devices<br> 
@@ -55,6 +63,7 @@ Z-Wave
 * Query Stages for devices<br> 
 * Device Specific configuration<br> 
 * Events and Services<br> 
+
 MQTT
 * Broker<br> 
 * Certificate<br> 
@@ -64,6 +73,7 @@ MQTT
 * Testing your setup<br> 
 * Logging<br> 
 * Processing JSON<br> 
+
 iOS
 * Basic notifications<br> 
 * Sounds<br> 
@@ -76,6 +86,7 @@ iOS
 * Requesting location updates<br> 
 * Location Tracking<br> 
 * Integration with other apps<br> 
+
 Ecosystem
 * Autostart<br> 
 * systemd (Linux)<br> 
