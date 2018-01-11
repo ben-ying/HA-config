@@ -7,8 +7,6 @@ Configuration
 * [Basic information](https://zhuanlan.zhihu.com/p/32127317 "7.0 configuration.yaml基本配置信息")<br> 
 * [Setting up devices](https://zhuanlan.zhihu.com/p/32127336 "8.0 添加设备之Broadlink RM Pro")<br> 
 * Customizing entities<br> 
-* Troubleshooting<br> 
-* Security Check Points<br> 
 
 Advanced Configuration
 * [Remote access](https://zhuanlan.zhihu.com/p/30704722 "3.0 安装Duck DNS，实现远程访问Home Assistant")<br> 
