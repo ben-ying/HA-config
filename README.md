@@ -3,7 +3,6 @@ Installation
 * [Hass.io](https://zhuanlan.zhihu.com/p/30568280 "1.0 安装Hass.io")<br> 
 
 Configuration
-* YAML<br> 
 * [Basic information](https://zhuanlan.zhihu.com/p/32127317 "7.0 configuration.yaml基本配置信息")<br> 
 * [Setting up devices](https://zhuanlan.zhihu.com/p/32127336 "8.0 添加设备之Broadlink RM Pro")<br> 
 * Customizing entities<br> 
