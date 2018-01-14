@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 29.8782
-  longitude: 121.5495
+  latitude: 29.8077
+  longitude: 121.5765
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
   # metric for Metric, imperial for Imperial
@@ -14,7 +14,7 @@ homeassistant:
   customize: !include customize.yaml
 
 # Show links to resources in log and frontend
-introduction:
+#introduction:
 
 # Enables the frontend
 frontend:
@@ -53,15 +53,29 @@ logbook:
 map:
 
 # Track the sun
-sun:
+# sun:
 
 # Weather prediction
-sensor:
-  - platform: yr
+#sensor:
+#  - platform: yr
 
 # Text to speech
 tts:
   - platform: google
+
+# yahoo weather sensor
+sensor:
+  - platform: yweather
+    monitored_conditions:
+     #- weather
+     #- weather_current
+      - temp_min
+      - temp_max
+      - wind_speed
+      - pressure
+      - visibility
+      - humidity
+      - temperature
 
 # xiaomi aqara
 xiaomi_aqara:
@@ -77,11 +91,11 @@ switch:
     mac: '34:ea:34:c7:6a:d7'
     switches:
       tv:
-        friendly_name: "TV"
+        friendly_name: "客厅电视(TV)"
         command_on: "JgBQAAABJpMTEhMREhQRExETEhQROBITEBQSExETEhMSEhITETgRFRETETgTExE3ExMREhEVERQRNxMTETcTExA5EjcSOBE4FAAGAgABJUoSAA0FAAAAAAAAAAA="
         command_off: "JgBQAAABJpMTEhMREhQRExETEhQROBITEBQSExETEhMSEhITETgRFRETETgTExE3ExMREhEVERQRNxMTETcTExA5EjcSOBE4FAAGAgABJUoSAA0FAAAAAAAAAAA="
       ac:
-        friendly_name: "AC"
+        friendly_name: "客厅空调(AC)"
         command_on: "JgAkAQABIpQUFBIVFBMTNxUTExQSFRMUEzkSFBMVEzcUFBMTFBQTFBMVEhUTExQUEhUTNxQUFRMTFBMUExQSFRM3ExUSOBQTFRQSOBMUFAACjBQUExQTExQUExUSFBQUEhQUFBMUExUTExQTFDcWEhIVExQTFBMVEhUUExMUExQSFhMUEhUSFRMUEjgUFBQ2FDcVAAUYAAEjlBQUEhUTExQ3FBMUExQUExUSOBQUExQSOBUTEhQUExUTEhYSFBQUExQTFBM3FRMTFREWExMUFBMUEzcVNhU2FBMUFBQ2FBQTAAKMFRQSFRIUFBMUFBIVExUSFRIUFRMTExQUFBMTFRMUExQTFBIWEhUTFBMUExQTFBQUEhUTFBMUExQSOBQ3FRMUNhQADQUAAAAA"
         command_off: "JgAkAQABIpQUFBIVFBMTNxUTExQSFRMUEzkSFBMVEzcUFBMTFBQTFBMVEhUTExQUEhUTNxQUFRMTFBMUExQSFRM3ExUSOBQTFRQSOBMUFAACjBQUExQTExQUExUSFBQUEhQUFBMUExUTExQTFDcWEhIVExQTFBMVEhUUExMUExQSFhMUEhUSFRMUEjgUFBQ2FDcVAAUYAAEjlBQUEhUTExQ3FBMUExQUExUSOBQUExQSOBUTEhQUExUTEhYSFBQUExQTFBM3FRMTFREWExMUFBMUEzcVNhU2FBMUFBQ2FBQTAAKMFRQSFRIUFBMUFBIVExUSFRIUFRMTExQUFBMTFRMUExQTFBIWEhUTFBMUExQTFBQUEhUTFBMUExQSOBQ3FRMUNhQADQUAAAAA"
 
@@ -90,7 +104,4 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
 
