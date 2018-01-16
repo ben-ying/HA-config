@@ -1,4 +1,3 @@
-# xiaomi
 light.gateway_light_7811dcb38873:
   friendly_name: 小米网关灯
   homebridge_name: 小米网关灯
@@ -17,8 +16,6 @@ binary_sensor.door_window_sensor_158d0001bf930f:
 sensor.illumination_7811dcb38873:
   friendly_name: 流明
   homebridge_name: 流明
-
-# yahoo
 sensor.yweather_humidity:
   friendly_name: 湿度
   homebridge_name: 湿度
@@ -32,6 +29,7 @@ sensor.yweather_temperature_min:
   friendly_name: 最低温度
   homebridge_name: 最低温度
 sensor.yweather_temperature_max:
+  attribution: Weather details provided by Yahoo! Inc.
   friendly_name: 最高温度
   homebridge_name: 最高温度
 sensor.yweather_visibility:
@@ -40,7 +38,3 @@ sensor.yweather_visibility:
 sensor.yweather_wind_speed:
   friendly_name: 风速
   homebridge_name: 风速
-
-
-
-
