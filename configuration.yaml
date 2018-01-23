@@ -23,6 +23,8 @@ frontend:
 config:
 
 http:
+  # port forwarding in router form 8123-8123 to 8123-433
+  server_port: 443
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
@@ -127,6 +129,4 @@ emulated_hue:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-
-
 
