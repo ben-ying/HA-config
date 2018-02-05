@@ -61,8 +61,6 @@ map:
 # sun:
 
 # Weather prediction
-#sensor:
-#  - platform: yr
 
 # Text to speech
 tts:
@@ -72,31 +70,6 @@ tts:
 #logger:
 #  default: info
 
-# tp link
-device_tracker:
-  - platform: tplink
-    host: 192.168.1.1
-    username: "admin"
-    password: "198813"
-    #password: "c3d54f63b607efb582fab364a762b2c015e5b0ba79dc8bb4abff59c225e18cdfbaee0a3b65937cc15722a3d78338520ca4d29a6487e422834040db3f331bed34a374b1504e8c216ec21043120583027c4d5762ef40f9b59708b361629e0bcc3775474ed094f14fcaa1b2761235deb2fa3c79c5f831ec51b7164a8bae5fbadafa"
-    new_device_defaults:
-      track_new_devices: True
-      hide_if_away: False
-
-# yahoo weather sensor
-sensor:
-  - platform: yweather
-    monitored_conditions:
-     #- weather
-     #- weather_current
-      - temp_min
-      - temp_max
-      - wind_speed
-      - pressure
-      - visibility
-      - humidity
-      - temperature
-
 # xiaomi aqara
 xiaomi_aqara:
   discovery_retry: 5
@@ -104,52 +77,12 @@ xiaomi_aqara:
     - key: 5r51j9lius672ywp
       mac: 78:11:DC:B3:88:73
 
-# boardlink
-switch:
-  - platform: broadlink
-    host: 192.168.1.123
-    mac: '34:ea:34:c7:6a:d7'
-    switches:
-      tv:
-        friendly_name: "客厅电视(TV)"
-        command_on: "JgBQAAABJpMTEhMREhQRExETEhQROBITEBQSExETEhMSEhITETgRFRETETgTExE3ExMREhEVERQRNxMTETcTExA5EjcSOBE4FAAGAgABJUoSAA0FAAAAAAAAAAA="
-        command_off: "JgBQAAABJpMTEhMREhQRExETEhQROBITEBQSExETEhMSEhITETgRFRETETgTExE3ExMREhEVERQRNxMTETcTExA5EjcSOBE4FAAGAgABJUoSAA0FAAAAAAAAAAA="
-      ac:
-        friendly_name: "客厅空调(AC)"
-        command_on: "JgAkAQABIpQUFBIVFBMTNxUTExQSFRMUEzkSFBMVEzcUFBMTFBQTFBMVEhUTExQUEhUTNxQUFRMTFBMUExQSFRM3ExUSOBQTFRQSOBMUFAACjBQUExQTExQUExUSFBQUEhQUFBMUExUTExQTFDcWEhIVExQTFBMVEhUUExMUExQSFhMUEhUSFRMUEjgUFBQ2FDcVAAUYAAEjlBQUEhUTExQ3FBMUExQUExUSOBQUExQSOBUTEhQUExUTEhYSFBQUExQTFBM3FRMTFREWExMUFBMUEzcVNhU2FBMUFBQ2FBQTAAKMFRQSFRIUFBMUFBIVExUSFRIUFRMTExQUFBMTFRMUExQTFBIWEhUTFBMUExQTFBQUEhUTFBMUExQSOBQ3FRMUNhQADQUAAAAA"
-        command_off: "JgAkAQABIpQUFBIVFBMTNxUTExQSFRMUEzkSFBMVEzcUFBMTFBQTFBMVEhUTExQUEhUTNxQUFRMTFBMUExQSFRM3ExUSOBQTFRQSOBMUFAACjBQUExQTExQUExUSFBQUEhQUFBMUExUTExQTFDcWEhIVExQTFBMVEhUUExMUExQSFhMUEhUSFRMUEjgUFBQ2FDcVAAUYAAEjlBQUEhUTExQ3FBMUExQUExUSOBQUExQSOBUTEhQUExUTEhYSFBQUExQTFBM3FRMTFREWExMUFBMUEzcVNhU2FBMUFBQ2FBQTAAKMFRQSFRIUFBMUFBIVExUSFRIUFRMTExQUFBMTFRMUExQTFBIWEhUTFBMUExQTFBQUEhUTFBMUExQSOBQ3FRMUNhQADQUAAAAA"
-
-# Amazon Echo
-emulated_hue: 
-  expose_by_default: true
-  exposed_domains:
-    - switch
-    - light
-    - group
-    - input_boolean
-    - media_player
-    - fan
-
+switch: !include switches.yaml
+sensor: !include sensors.yaml
+device_tracker: !include device_tracker.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-
-# google assistant
-google_assistant:
-  project_id: home-assistant-33d25
-  client_id: SD4aNo7uopKg1bNN5Sb8YVMXFzilWfyY4Kf0q3YDdKyYywLLNReZ6TlfyRiAFkFGBi5pUvhX9Urf9V3a
-  access_token: eZC4JvKUFfd5vE1tMGRQ47FR4qTkSGS5JkJ9uyN8fIdkTrgzt4nG50XrdcGhAGu2D5mpS1Gsgz90vzqe
-  agent_user_id: benying1988@gmail.com
-  api_key: AIzaSyA-FcgE73IzplDrgHr9PO7onLpKJ51OaP0
-  exposed_domains:
-    - switch
-    - light
-    - group
-  entity_config:
-    light.gateway_light_7811dcb38873:
-      name: Custom Name for Alexa
-      aliases:
-        - bright lights
-        - entry lights
-      type: light
-
+zone: !include zones.yaml
+google_assistant: !include google_assistant.yaml
+emulated_hue: !include amazon_echo.yaml 

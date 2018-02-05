@@ -1,0 +1,15 @@
+# yahoo weather sensor
+- platform: yweather
+  #woeid: 2132579 #ningbo
+  name: 雅虎天气
+  monitored_conditions:
+   #- weather
+   #- weather_current
+    - temp_min
+    - temp_max
+    - wind_speed
+    - pressure
+    - visibility
+    - humidity
+    - temperature
+# - platform: yr

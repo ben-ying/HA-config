@@ -1,0 +1,8 @@
+expose_by_default: true
+exposed_domains:11
+  - switch
+  - light
+  - group
+  - input_boolean
+  - media_player
+  - fan

@@ -1,0 +1,16 @@
+project_id: home-assistant-33d25
+client_id: SD4aNo7uopKg1bNN5Sb8YVMXFzilWfyY4Kf0q3YDdKyYywLLNReZ6TlfyRiAFkFGBi5pUvhX9Urf9V3a
+access_token: eZC4JvKUFfd5vE1tMGRQ47FR4qTkSGS5JkJ9uyN8fIdkTrgzt4nG50XrdcGhAGu2D5mpS1Gsgz90vzqe
+agent_user_id: benying1988@gmail.com
+api_key: AIzaSyA-FcgE73IzplDrgHr9PO7onLpKJ51OaP0
+exposed_domains:
+  - switch
+  - light
+  - group
+entity_config:
+  light.gateway_light_7811dcb38873:
+    name: Custom Name for Alexa
+    aliases:
+      - bright lights
+      - entry lights
+    type: light
