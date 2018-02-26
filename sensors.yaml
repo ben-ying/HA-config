@@ -1,7 +1,6 @@
 # yahoo weather sensor
 - platform: yweather
-  #woeid: 2132579 #ningbo
-  name: 雅虎天气
+  woeid: 2132579 #ningbo
   monitored_conditions:
    #- weather
    #- weather_current

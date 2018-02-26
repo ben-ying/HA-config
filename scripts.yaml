@@ -1,0 +1,10 @@
+msg_who_is_home:
+  sequence:
+    - service: notify.notify
+      data_template:
+        message: >
+          {% if is_state('device_tracker.paulus', 'home') %}
+            Ha, Paulus is home!
+          {% else %}
+            Paulus is at {{ states('device_tracker.paulus') }}.
+          {% endif %}

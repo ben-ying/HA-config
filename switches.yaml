@@ -1,6 +1,7 @@
 - platform: broadlink
   host: 192.168.1.123
   mac: '34:ea:34:c7:6a:d7'
+  entity_namespace: holiday_house
   switches:
     tv:
       friendly_name: "客厅电视(TV)"
