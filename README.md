@@ -1,181 +1,23 @@
-<table>
-   <tr>
-      <td>Component</td>
-      <td>Name</td>
-      <td>Entity ID</td>
-      <td>Friendly Name</td>
-      <td>HomeBridge Name</td>
-      <td>Emulated hue Name</td>
-   </tr>
-   <tr>
-      <td>yr</td>
-      <td>temp_min</td>
-      <td>sensor.yweather_temperature_min</td>
-      <td>最低温度</td>
-      <td>最低温度</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>temp_max</td>
-      <td>sensor.yweather_temperature_max</td>
-      <td>最高温度</td>
-      <td>最高温度</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>wind_speed</td>
-      <td>sensor.yweather_wind_speed</td>
-      <td>风速</td>
-      <td>风速</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>pressure</td>
-      <td>sensor.yweather_pressure</td>
-      <td>气压</td>
-      <td>气压</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>visibility</td>
-      <td>sensor.yweather_visibility</td>
-      <td>能见度</td>
-      <td>能见度</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>humidity</td>
-      <td>sensor.yweather_humidity</td>
-      <td>湿度</td>
-      <td>湿度</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>temperature</td>
-      <td>sensor.yweather_temperature</td>
-      <td>当前温度</td>
-      <td>当前温度</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>broadlink</td>
-      <td>tv</td>
-      <td></td>
-      <td>客厅电视(TV)</td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>ac</td>
-      <td></td>
-      <td>客厅空调(AC)</td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>emulated_hue</td>
-      <td>Amazon Echo</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>google_assistant</td>
-      <td>Google Assistant</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>xiaomi_aqara</td>
-      <td>gateway</td>
-      <td>light.gateway_light_7811dcb38873</td>
-      <td>小米网关灯</td>
-      <td>小米网关灯</td>
-      <td>light 1</td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>socket</td>
-      <td>switch.plug_158d0001b8a062</td>
-      <td>小米插座</td>
-      <td>小米插座</td>
-      <td>socket 1</td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>motion sensor</td>
-      <td>binary_sensor.motion_sensor_158d0001c1d36a</td>
-      <td>人体传感器</td>
-      <td>人体传感器</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>wireless switch</td>
-      <td>binary_sensor.switch_158d0001bf1f9a</td>
-      <td>无线开关</td>
-      <td>无线开关</td>
-      <td>switch 1</td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>door window sensor</td>
-      <td>binary_sensor.door_window_sensor_158d0001bf930f</td>
-      <td>门窗传感器</td>
-      <td>门窗传感器</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-      <td>illumination</td>
-      <td>sensor.illumination_7811dcb38873</td>
-      <td>照明</td>
-      <td>照明</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td></td>
-   </tr>
-</table>
+| Component        | Name               | Entity ID                                       | Friendly Name | HomeBridge Name | Hue Name |
+| ---------------- |--------------------| ------------------------------------------------|---------------|-----------------|------------|
+| yr               | temp_min           | sensor.yweather_temperature_min                 | 最低温度       | 最低温度         |            |
+|                  | temp_max           | sensor.yweather_temperature_max                 | 最高温度       | 最高温度         |            |
+|                  | wind_speed         | sensor.yweather_wind_speed                      | 风速           | 风速            |            |
+|                  | pressure           | sensor.yweather_pressure                        | 气压           | 气压            |            |
+|                  | visibility         | sensor.yweather_visibility                      | 能见度         | 能见度          |             |
+|                  | humidity           | sensor.yweather_humidity                        | 湿度           | 湿度            |            |
+|                  | temperature        | sensor.yweather_temperature                     | 当前温度       | 当前温度         |            |
+|                  |                    |                                                 |                |                 |           |
+| broadlink        | tv                 |                                                 | 客厅电视(TV)    |                 |           |
+|                  | av                 |                                                 | 客厅电视(TV)    |                 |           |
+|                  |                    |                                                 |                |                 |           |
+| xiaomi_aqara     | gateway            | light.gateway_light_7811dcb38873                | 小米网关灯      | 小米网关灯       | light 1   |
+|                  | socket             | switch.plug_158d0001b8a062                      | 小米插座        | 小米插座         | socket 1  |
+|                  | motion sensor      | binary_sensor.motion_sensor_158d0001c1d36a      | 人体传感器      | 人体传感器       |           |
+|                  | wireless switch    | light.gateway_light_7811dcb38873                | 无线开关        | 无线开关         | switch 1  |
+|                  | door window sensor | binary_sensor.door_window_sensor_158d0001bf930f | 门窗传感器      | 门窗传感器       |           |
+|                  | illumination       | sensor.illumination_7811dcb38873                | 照明            | 照明            |           | 
+|                  |                    |                                                 |                 |                 |          |
+| emulated_hue     | Amazon Echo        |                                                 |                 |                 |          |
+|                  |                    |                                                 |                 |                 |          |
+| google_assistant | Google Assistant   |                                                 |                 |                 |          |
