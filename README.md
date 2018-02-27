@@ -1,6 +1,6 @@
 | Component        | Name               | Entity ID                                       | Friendly Name | HomeBridge Name | Hue Name |
 | ---------------- |--------------------| ------------------------------------------------|---------------|-----------------|------------|
-| yr               | temp_min           | sensor.yweather_temperature_min                 | 最低温度       | 最低温度         |            |
+| yr               | temp_min           | sensor.yweathe<br>r_temperature_min<br>                 | 最低温度       | 最低温度         |            |
 |                  | temp_max           | sensor.yweather_temperature_max                 | 最高温度       | 最高温度         |            |
 |                  | wind_speed         | sensor.yweather_wind_speed                      | 风速           | 风速            |            |
 |                  | pressure           | sensor.yweather_pressure                        | 气压           | 气压            |            |
