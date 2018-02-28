@@ -8,3 +8,17 @@ msg_who_is_home:
           {% else %}
             Paulus is at {{ states('device_tracker.paulus') }}.
           {% endif %}
+
+hide_yahoo_weather:
+  sequence:
+    - service: group.set_visibility
+      data_template:
+          entity_id: group.weather_sensors
+          visible: False
+
+show_yahoo_weather:
+  sequence:
+    - service: group.set_visibility
+      data_template:
+          entity_id: group.weather_sensors
+          visible: True

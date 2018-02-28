@@ -1,0 +1,14 @@
+default_view:
+  entities:
+    - group.weather_sensors
+
+weather_sensors:
+  name: Yahoo Weather
+  entities:
+    - sensor.yweather_temperature_min
+    - sensor.yweather_temperature_max
+    - sensor.yweather_wind_speed
+    - sensor.yweather_pressure
+    - sensor.yweather_visibility
+    - sensor.yweather_humidity
+    - sensor.yweather_temperature
