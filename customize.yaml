@@ -1,61 +1,59 @@
-# xiaomi
 light.gateway_light_7811dcb38873:
   friendly_name: 小米网关灯
   homebridge_name: 小米网关灯
-  emulated_hue_name: "light 1"
+  emulated_hue_name: light 1
   emulated_hue_hidden: false
-
 switch.plug_158d0001b8a062:
   friendly_name: 小米插座
   homebridge_name: 小米插座
-  emulated_hue_name: "socket 1"
+  emulated_hue_name: socket 1
   emulated_hue_hidden: false
-
 binary_sensor.motion_sensor_158d0001c1d36a:
   friendly_name: 人体传感器
   homebridge_name: 人体传感器
-   
 binary_sensor.switch_158d0001bf1f9a:
   friendly_name: 无线开关
   homebridge_name: 无线开关
-  emulated_hue_name: "switch 1"
+  emulated_hue_name: switch 1
   emulated_hue_hidden: false
-
 binary_sensor.door_window_sensor_158d0001bf930f:
   friendly_name: 门窗传感器
   homebridge_name: 门窗传感器
-
 sensor.illumination_7811dcb38873:
   friendly_name: 照明
   homebridge_name: 照明
-   
-# yweather  
 sensor.yweather_humidity:
   friendly_name: 湿度
   homebridge_name: 湿度
-
 sensor.yweather_pressure:
   friendly_name: 气压
   homebridge_name: 气压
-
 sensor.yweather_temperature:
   friendly_name: 当前温度
   homebridge_name: 当前温度
-
 sensor.yweather_temperature_min:
   friendly_name: 最低温度
   homebridge_name: 最低温度
-
 sensor.yweather_temperature_max:
   attribution: Weather details provided by Yahoo! Inc.
   friendly_name: 最高温度
   homebridge_name: 最高温度
-
 sensor.yweather_visibility:
   friendly_name: 能见度
   homebridge_name: 能见度
-
 sensor.yweather_wind_speed:
   friendly_name: 风速
   homebridge_name: 风速
 
+# 鱼缸灯slot
+switch.slot:
+  emulated_hue_name: switch 2
+# 鱼缸过滤器slot  
+switch._slot:
+  emulated_hue_name: switch 3
+# 其他slot
+switch._slot_2:
+  emulated_hue_name: switch 4
+# 鱼缸加热棒slot
+switch._slot_3:
+  emulated_hue_name: switch 5

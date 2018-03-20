@@ -1,1 +1,11 @@
-[]
+- action:
+  - data:
+      message: Sensor value greater than 10
+    service: persistent_notification.create
+  alias: test
+  condition: []
+  id: '1520584263865'
+  trigger:
+  - above: '10'
+    entity_id: sensor.yweather_temperature
+    platform: numeric_state

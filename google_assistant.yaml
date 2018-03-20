@@ -13,4 +13,3 @@ entity_config:
     aliases:
       - bright lights
       - entry lights
-    type: light
