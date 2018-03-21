@@ -1,11 +1,144 @@
 - action:
-  - data:
-      message: Sensor value greater than 10
-    service: persistent_notification.create
+  - service: cover.close_cover_tilt
   alias: test
-  condition: []
-  id: '1520584263865'
+  condition:
+  - condition: state
+    entity_id: group.all_devices
+    state: '1'
+  id: '1521552726448'
   trigger:
-  - above: '10'
+  - entity_id: automation.fish_tank_light_on
+    from: '1'
+    platform: state
+    to: '2'
+
+# 触发条件：每半个小时触发一次
+# 条件：周末或工作日且日落前一个小时后照度 < 50
+# 动作：开
+- id: 'fish tank light on'
+  alias: 鱼缸灯开1
+  trigger:
+    platform: time
+    minutes: /30
+    seconds: 0
+  condition:
+    condition: or
+    conditions:
+    - condition: time
+      weekday:
+      - sat
+      - sun
+    - condition: and
+      conditions:
+      - condition: sun
+        after: sunset
+        after_offset: -01:00:00
+      - condition: time
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+      - condition: numeric_state
+        entity_id: sensor.illumination_7811dcb38873
+        below: '50'
+  action:
+    service: switch.turn_on
+    entity_id: switch.slot
+
+# 触发条件：每半个小时触发一次 
+# 条件：非周末且照度> 50 
+# 动作：关
+- id: 'fish tank light off'
+  alias: 鱼缸灯关1
+  trigger:
+    platform: time
+    minutes: /30
+    seconds: 0
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    - condition: numeric_state
+      entity_id: sensor.illumination_7811dcb38873
+      above: '50'
+  action:
+    service: switch.turn_off
+    entity_id: switch.slot
+
+# 触发条件：每小时触发一次
+# 条件：温度低于20度
+# 动作：开
+- id: 'Aquarium heater on'
+  alias: 鱼缸加热棒开1 
+  trigger:
+    platform: time
+    hours: '/01'
+    minutes: 00
+    seconds: 00
+  condition:
+    condition: numeric_state
     entity_id: sensor.yweather_temperature
-    platform: numeric_state
+    below: 20
+  action:
+    service: switch.turn_on
+    entity_id: switch._slot_3
+
+# 触发条件：每小时触发一次
+# 条件：温度高于25度
+# 动作：关    
+- id: 'Aquarium heater off'
+  alias: 鱼缸加热棒关1
+  trigger:
+    platform: time
+    hours: /01
+    minutes: 0
+    seconds: 0
+  condition:
+    condition: numeric_state
+    entity_id: sensor.yweather_temperature
+    below: 20
+  action:
+    service: switch.turn_on
+    entity_id: switch._slot_3
+
+# 触发条件：每半个小时触发一次
+# 条件：关着
+# 动作：开
+- id: 'Aquarium water circulation on'
+  alias: 鱼缸水循环开1
+  trigger:
+    platform: time
+    minutes: /30
+    seconds: 0
+  condition:
+    condition: state
+    entity_id: switch._slot
+    state: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: switch._slot
+
+# 触发条件：每半个小时触发一次
+# 条件：开着
+# 动作：关
+- id: 'Aquarium water circulation off'
+  alias: 鱼缸水循环关1
+  trigger:
+    platform: time
+    minutes: /30
+    seconds: 0
+  condition:
+    condition: state
+    entity_id: switch._slot
+    state: 'off'
+  action:
+    service: switch.turn_off
+    entity_id: switch._slot
