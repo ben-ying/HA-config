@@ -33,14 +33,13 @@
         switch.turn_off
       {% endif %}
 
-# 触发条件：每小时触发一次
+# 触发条件：每5分钟触发一次
 # 动作：温度低于22度开否则关
 - id: 'Aquarium heater'
   alias: 鱼缸加热棒slot
   trigger:
     platform: time
-    hours: '/01'
-    minutes: 00
+    minutes: /5
     seconds: 00
   action:
     entity_id: switch._slot_3
