@@ -16,6 +16,9 @@ homeassistant:
 # Show links to resources in log and frontend
 #introduction:
 
+# Enables wake on lan
+wake_on_lan:
+
 # Enables the frontend
 frontend:
 
@@ -86,3 +89,5 @@ script: !include scripts.yaml
 zone: !include zones.yaml
 google_assistant: !include google_assistant.yaml
 emulated_hue: !include amazon_echo.yaml 
+shell_command: !include shell_commands.yaml
+

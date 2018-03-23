@@ -22,3 +22,13 @@
     slot_2: '鱼缸过滤器 slot'
     slot_3: '鱼缸加热棒 slot'
     slot_4: '其他 slot'
+
+- platform: wake_on_lan
+  name: "macbook wol" 
+  mac_address: "a4-5e-60-f2-9d-b3"
+  host: "192.168.1.175"
+  #  broadcast_address: "192.168.1.175"
+  turn_off:
+    service: shell_command.turn_off_macbook
+
+
