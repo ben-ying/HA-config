@@ -24,7 +24,7 @@
     slot_4: '其他 slot'
 
 - platform: wake_on_lan
-  name: "macbook wol" 
+  name: "MacBook WOL" 
   mac_address: "a4-5e-60-f2-9d-b3"
   host: "192.168.1.175"
   #  broadcast_address: "192.168.1.175"

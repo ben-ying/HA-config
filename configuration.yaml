@@ -18,6 +18,7 @@ homeassistant:
 
 # Enables wake on lan
 wake_on_lan:
+  mac: "a4:5e:60:f2:9d:b3"
 
 # Enables the frontend
 frontend:

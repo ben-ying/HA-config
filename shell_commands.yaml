@@ -1,2 +1,3 @@
-turn_off_macbook: '/usr/bin/ssh ben@192.168.1.175 sudo shutdown -h now'
-#turn_off_macbook: 'ssh -F /config/ssh_config -i /config/.ssh/id_rsa ben@192.168.1.175 sudo shutdown -h now 2>/config/command.log'
+#turn_off_macbook: '/usr/bin/ssh ben@192.168.1.175 sudo shutdown -h now'
+turn_off_macbook: 'ssh -F /config/ssh_config -i /config/.ssh/id_rsa ben@192.168.1.175 sudo shutdown -h now 2 > /config/command.log'
+
