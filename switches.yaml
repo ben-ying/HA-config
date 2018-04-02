@@ -18,10 +18,10 @@
   type: mp1
   friendly_name: "插排1"
   slots:
-    slot_1: '鱼缸灯slot'
-    slot_2: '鱼缸过滤器 slot'
-    slot_3: '鱼缸加热棒 slot'
-    slot_4: '其他 slot'
+    slot_1: 'slot1鱼缸灯'
+    slot_2: 'slot2鱼缸水循环'
+    slot_3: 'slot3鱼缸加热棒'
+    slot_4: 'slot4其他'
 
 - platform: wake_on_lan
   name: "MacBook WOL" 
