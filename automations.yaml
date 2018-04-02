@@ -1,71 +1,57 @@
 # 鱼缸灯。
-# 触发条件：日落日出
-# 动作：日出开日落后2小时关
-- alias: 鱼缸灯开slot  # 不能全中文
+# 触发条件：日出
+# 动作：日出开
+- alias: slot1鱼缸灯开  # 不能全中文
   trigger:
     platform: sun
     event: sunrise
   action:
-    entity_id: switch.slot
+    entity_id: switch.slot1
     service: switch.turn_on
 
-- alias: 鱼缸灯关slot  # 不能全中文
+# 鱼缸灯。
+# 触发条件：日落
+# 动作：日落后2小时关
+- alias: slot1鱼缸灯关  # 不能全中文
   trigger:
     platform: sun
     event: sunset
     offset: '02:00:00'
   action:
-    entity_id: switch.slot
+    entity_id: switch.slot1
     service: switch.turn_off
       
-
-# 鱼缸加热棒
-# 触发条件：每5分钟触发一次
-# 动作：温度低于22度开否则关
-- alias: 鱼缸加热棒slot # 不能全中文
-  trigger:
-    platform: time
-    minutes: /5
-    seconds: 00
-  action:
-    entity_id: switch._slot_3
-    service_template: >
-      {% if is_state("switch._slot_3", "off") and states.sensor.yweather_temperature.state|int < 22  %}
-        switch.turn_on
-      {%-elif is_state("switch._slot_3", "on") %}
-        switch.turn_off
-      {% endif %}
-      
-# 鱼缸加热棒
-# 触发条件：每5分钟触发一次
-# 动作：温度低于22度开否则关
-- alias: 鱼缸加热棒slot # 不能全中文
-  trigger:
-    platform: time
-    minutes: /5
-    seconds: 00
-  action:
-    entity_id: switch._slot_2
-    service_template: >
-      {% if is_state("switch._slot_2", "off") and states.sensor.yweather_temperature.state|int < 22  %}
-        switch.turn_on
-      {%-elif is_state("switch._slot_2", "on") %}
-        switch.turn_off
-      {% endif %}
-
 # 鱼缸水循环
 # 触发条件：每半个小时触发一次
 # 动作：开或关
-- alias: 鱼缸水循环开slot # 不能全中文
+- alias: slot2鱼缸水循环 # 不能全中文
   trigger:
     platform: time
     minutes: /30
     seconds: 00
   action:
-    entity_id: switch._slot
+    entity_id: switch.slot2
     service_template: >
-      {% if is_state("switch._slot", "off") %}
+      {% if is_state("switch.slot2", "off") %}
         switch.turn_on
-      {%-elif is_state("switch._slot", "on") %}
+      {%-elif is_state("switch.slot2", "on") %}
         switch.turn_off
       {% endif %}
+      
+# 鱼缸加热棒
+# 触发条件：每5分钟触发一次
+# 动作：温度低于22度开否则关
+- alias: slot3鱼缸加热棒 # 不能全中文
+  trigger:
+    platform: time
+    minutes: /5
+    seconds: 00
+  action:
+    entity_id: switch.slot3
+    service_template: >
+      {% if is_state("switch.slot3", "off") and states.sensor.yweather_temperature.state|int < 22  %}
+        switch.turn_on
+      {%-elif is_state("switch.slot3", "on") %}
+        switch.turn_off
+      {% endif %}
+
