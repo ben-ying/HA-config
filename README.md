@@ -10,10 +10,10 @@
 |                        |                    |                                                     |                |                |            |
 | <b>broadlink<b>        | tv                 |                                                    | 客厅电视(TV)    |                 |            |
 |                        | av                 |                                                    | 客厅电视(TV)    |                 |            |
-|                        | switch slot        | switch.slot1                                       | slot1鱼缸灯     |                 |   switch 2 |
-|                        | switch slot        | switch.slot2                                       | slot2鱼缸过滤器  |                 |   switch 3 |
-|                        | switch slot        | switch.slot3                                       | slot3鱼缸加热棒  |                 |   switch 4 |
-|                        | switch slot        | switch.slot4                                       | slot4其他        |                 |   switch 5 |
+|                        | switch slot        | switch.slot1                                       | slot1鱼缸灯     |                 |   slot1    |
+|                        | switch slot        | switch.slot2                                       | slot2鱼缸过滤器  |                 |   slot2    |
+|                        | switch slot        | switch.slot3                                       | slot3鱼缸加热棒  |                 |   slot3    |
+|                        | switch slot        | switch.slot4                                       | slot4其他        |                 |   slot4    |
 |                        |                    |                                                     |                |                 |            |
 | <b>xiaomi_aqara<b>     | gateway            | light.<br>gateway_light_7811dcb38873                | 小米网关灯      | 小米网关灯       | light 1  |
 |                        | socket             | switch.<br>plug_158d0001b8a062                      | 小米插座        | 小米插座         | socket 1 |
