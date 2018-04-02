@@ -1,23 +1,23 @@
 # 鱼缸灯。
 # 触发条件：日落日出
 # 动作：日出开日落后2小时关
-- alias: 鱼缸灯slot  # 不能全中文
+- alias: 鱼缸灯开slot  # 不能全中文
   trigger:
-    - platform: sun
-      event: sunrise
-    - platform: sun
-      event: sunset
-      offset: '02:00:00'
+    platform: sun
+    event: sunrise
   action:
     entity_id: switch.slot
-    service_template: >
-      {% if now().strftime("%H") | int < 8 %}
-        # sunrise
-        switch.turn_on
-      {% else %}
-        # sunset
-        switch.turn_off
-      {% endif %} 
+    service: switch.turn_on
+
+- alias: 鱼缸灯关slot  # 不能全中文
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '02:00:00'
+  action:
+    entity_id: switch.slot
+    service: switch.turn_off
+      
 
 # 鱼缸加热棒
 # 触发条件：每5分钟触发一次
@@ -35,6 +35,23 @@
       {%-elif is_state("switch._slot_3", "on") %}
         switch.turn_off
       {% endif %}
+      
+# 鱼缸加热棒
+# 触发条件：每5分钟触发一次
+# 动作：温度低于22度开否则关
+- alias: 鱼缸加热棒slot # 不能全中文
+  trigger:
+    platform: time
+    minutes: /5
+    seconds: 00
+  action:
+    entity_id: switch._slot_2
+    service_template: >
+      {% if is_state("switch._slot_2", "off") and states.sensor.yweather_temperature.state|int < 22  %}
+        switch.turn_on
+      {%-elif is_state("switch._slot_2", "on") %}
+        switch.turn_off
+      {% endif %}
 
 # 鱼缸水循环
 # 触发条件：每半个小时触发一次
@@ -43,7 +60,7 @@
   trigger:
     platform: time
     minutes: /30
-    seconds: 0
+    seconds: 00
   action:
     entity_id: switch._slot
     service_template: >
