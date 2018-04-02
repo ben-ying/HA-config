@@ -6,14 +6,14 @@
 |                        | pressure           | sensor.<br>yweather_pressure                        | 气压           | 气压            |            |
 |                        | visibility         | sensor.<br>yweather_visibility                      | 能见度         | 能见度          |              |
 |                        | humidity           | sensor.<br>yweather_humidity                        | 湿度           | 湿度            |            |
-|                        | temperature        | sensor.<br>yweather_temperature                     | 当前温度       | 当前温度         |            |
-|                        |                    |                                                     |                |                 |            |
+|                        | temperature        | sensor.<br>yweather_temperature                     | 当前温度       | 当前温度        |              |
+|                        |                    |                                                     |                |                |            |
 | <b>broadlink<b>        | tv                 |                                                    | 客厅电视(TV)    |                 |            |
 |                        | av                 |                                                    | 客厅电视(TV)    |                 |            |
-|                        | switch slot        | switch.slot                                        | 鱼缸灯slot      |                 |   switch 2 |
-|                        | switch slot        | switch._slot                                       | 鱼缸过滤器slot   |                 |   switch 3 |
-|                        | switch slot        | switch._slot_2                                     | 其他slot        |                 |   switch 4 |
-|                        | switch slot        | switch._slot_3                                     | 鱼缸加热棒slot   |                 |   switch 5 |
+|                        | switch slot        | switch.slot1                                       | slot1鱼缸灯     |                 |   slot1    |
+|                        | switch slot        | switch.slot2                                       | slot2鱼缸过滤器  |                 |   slot2    |
+|                        | switch slot        | switch.slot3                                       | slot3鱼缸加热棒  |                 |   slot3    |
+|                        | switch slot        | switch.slot4                                       | slot4其他        |                 |   slot4    |
 |                        |                    |                                                     |                |                 |            |
 | <b>xiaomi_aqara<b>     | gateway            | light.<br>gateway_light_7811dcb38873                | 小米网关灯      | 小米网关灯       | light 1  |
 |                        | socket             | switch.<br>plug_158d0001b8a062                      | 小米插座        | 小米插座         | socket 1 |
