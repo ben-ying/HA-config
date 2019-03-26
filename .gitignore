@@ -1,7 +1,6 @@
 *
 !*.yaml
 !scenes
-!downloads
 !.gitignore
 secrets.yaml
 known_devices.yaml
